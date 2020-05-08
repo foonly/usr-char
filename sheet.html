@@ -1,0 +1,102 @@
+<div class="2colrow">
+    <div class="col">
+    	<label>Name:</label><input type="text" name="attr_character_name" />
+		<label>Gender:</label><input type="text" name="attr_gender" />
+		<label>Age:</label><input type="text" name="attr_age" />
+	</div>
+
+	<div class="col">
+		<label>Race:</label><input type="text" name="attr_race" />
+		<label>Height:</label><input type="text" name="attr_height" />
+		<label>Weight:</label><input type="text" name="attr_weight" />
+	</div>
+</div>
+<hr/>
+
+<h2>Traits</h2>
+<div class="3colrow">
+	<div class="col">
+		<label>Fortitude</label><input type="number" name='attr_fortitude' class='sheet-short'>
+        <br />
+		<label>Initiative</label><input type="number" name='attr_initiative' class='sheet-short'>
+        <br />
+		<label>Mobility</label><input type="number" name='attr_mobility' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_mobility">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+        <br />
+        <label>Melee Combat</label><input type="number" name='attr_melee' class='sheet-short'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[4d10<@{melee}]]}}'></button>
+        <br />
+		<label>Ranged Combat</label><input type="number" name='attr_ranged' class='sheet-short'>
+        <br />
+		<label>Charisma</label><input type="number" name='attr_charisma' class='sheet-short'>
+        <br />
+		<label>Subterfuge</label><input type="number" name='attr_subterfuge' class='sheet-short'>
+        <br />
+		<label>Craftmanship</label><input type="number" name='attr_craftmanship' class='sheet-short'>
+	</div>
+	<div class="col">
+		<label>Intelligence</label><input type="number" name='attr_intelligence' class='sheet-short'>
+        <br />
+		<label>Willpower</label><input type="number" name='attr_willpower' class='sheet-short'>
+        <br />
+		<label>Cognition</label><input type="number" name='attr_cognition' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_cognition">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specval" class="sheet-short" />
+        </fieldset>
+        <br />
+		<label>Medicine</label><input type="number" name='attr_medicine' class='sheet-short'>
+        <br />
+		<label>Engineering</label><input type="number" name='attr_engineering' class='sheet-short' value='25'>
+        <br />
+		<label>Survival</label><input type="number" name='attr_medicine' class='sheet-short'>
+        <br />
+		<label>Animals</label><input type="number" name='attr_animals' class='sheet-short' value='25'>
+        <br />
+		<label>Naval</label><input type="number" name='attr_engineering' class='sheet-short' value='25'>
+
+	</div>
+
+	<div class="col">
+        <h3>Chips</h3>
+        <label>Reroll</label> <input type="checkbox" name="attr_reroll"><br />
+        <label>Reroll Plus</label> <input type="checkbox" name="attr_rerollplus"><br />
+        <label>Bonus</label> <input type="checkbox" name="attr_bonus"><br />
+        <label>Damage</label> <input type="checkbox" name="attr_damage"><br />
+        <label>Position</label> <input type="checkbox" name="attr_position"><br />
+    </div>
+
+</div>
+<div class="3colrow">
+
+	<div class="col">
+		<h2>Derived Stats</h2>
+        <div class="stats">
+            <h3>Base</h3><h3>Max</h3>
+            <label>Pace</label><input type="text" name="attr_pace" /><input type="text" name="attr_pace_max"  />
+            <label>Parry</label><input type="text" name="attr_parry" /><input type="text" name="attr_parry_max" />
+            <label>Toughness</label><input type="text" name="attr_toughness"  /><input type="text" name="attr_toughness_max"  />
+            <label>Charisma</label><input type="text" name="attr_charisma" " /><input type="text" name="attr_charisma_max"  />
+        </div>
+	</div>
+
+	<div class="col">
+
+		<h2>Hindrances</h2>
+
+		<textarea name="attr_hindrances"></textarea>
+
+		<hr/>
+
+		<h2>Edges</h2>
+
+		<textarea name="attr_edges"></textarea>
+
+	</div>
+
+</div>
