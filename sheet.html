@@ -1,102 +1,135 @@
-<div class="2colrow">
-    <div class="col">
-    	<label>Name:</label><input type="text" name="attr_character_name" />
-		<label>Gender:</label><input type="text" name="attr_gender" />
-		<label>Age:</label><input type="text" name="attr_age" />
-	</div>
-
-	<div class="col">
-		<label>Race:</label><input type="text" name="attr_race" />
-		<label>Height:</label><input type="text" name="attr_height" />
-		<label>Weight:</label><input type="text" name="attr_weight" />
-	</div>
-</div>
-<hr/>
-
-<h2>Traits</h2>
 <div class="3colrow">
+    <div class="col">
+        <h2>Attributes</h2>
+    </div>
+    <div class="col">
+        <h2>Skills</h2>
+    </div>
+</div>
+<div class="3colrow">
+    <div class="col">
+		<label>Fortitude</label><input type="number" name='attr_fortitude' class='sheet-short' />
+        <br />
+		<label>Initiative</label><input type="number" name='attr_initiative' class='sheet-short' />
+        <br />
+		<label>Intelligence</label><input type="number" name='attr_intelligence' class='sheet-short' />
+        <br />
+		<label>Willpower</label><input type="number" name='attr_willpower' class='sheet-short' />
+        <br />
+		<label>Perception</label><input type="number" name='attr_perception' class='sheet-short' />
+		<h3>Secondary Traits</h3>
+        <div class="stats">
+            <label>Movement Speed</label> <input type="text" name="attr_movementspeed" disabled="true" value="(@{mobility}*2+@{fortitude}+20)" class="sheet-short" /><br />
+            <label>Combat Speed</label> <input type="text" name="attr_combatspeed" disabled="true" value="(@{mobility}+@{melee})" class="sheet-short" /><br />
+            <label>Damage Resistance</label> <input type="text" name="attr_combatspeed" disabled="true" value="(floor(@{fortitude}/2)+1)" class="sheet-short" /><br />
+        </div>
+        <h3>Fate Chips</h3>
+        <input type="checkbox" name="attr_reroll"> <label for="reroll">Reroll</label><br />
+        <input type="checkbox" name="attr_rerollplus"> <label for="rerollplus">Reroll+</label><br />
+        <input type="checkbox" name="attr_bonus"> <label for="bonus">Bonus</label><br />
+        <input type="checkbox" name="attr_damage"> <label for="damage">Damage</label><br />
+        <input type="checkbox" name="attr_position"> <label for="position">Position</label><br />
+	</div>
 	<div class="col">
-		<label>Fortitude</label><input type="number" name='attr_fortitude' class='sheet-short'>
+        <label>Melee Combat</label><input type="number" name='attr_melee' class='sheet-short'>
         <br />
-		<label>Initiative</label><input type="number" name='attr_initiative' class='sheet-short'>
+        <fieldset class="repeating_melee">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
         <br />
-		<label>Mobility</label><input type="number" name='attr_mobility' class='sheet-short'>
+		<label>Ranged Combat</label><input type="number" name='attr_ranged' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_ranged">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+        <br />
+		<label>Mobility</label><input type="number" name='attr_mobility' class='sheet-short' />
         <br />
         <fieldset class="repeating_mobility">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-        <label>Melee Combat</label><input type="number" name='attr_melee' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[4d10<@{melee}]]}}'></button>
+		<label>Presence</label><input type="number" name='attr_presence' class='sheet-short'>
         <br />
-		<label>Ranged Combat</label><input type="number" name='attr_ranged' class='sheet-short'>
-        <br />
-		<label>Charisma</label><input type="number" name='attr_charisma' class='sheet-short'>
-        <br />
-		<label>Subterfuge</label><input type="number" name='attr_subterfuge' class='sheet-short'>
-        <br />
-		<label>Craftmanship</label><input type="number" name='attr_craftmanship' class='sheet-short'>
-	</div>
-	<div class="col">
-		<label>Intelligence</label><input type="number" name='attr_intelligence' class='sheet-short'>
-        <br />
-		<label>Willpower</label><input type="number" name='attr_willpower' class='sheet-short'>
-        <br />
-		<label>Cognition</label><input type="number" name='attr_cognition' class='sheet-short'>
-        <br />
-        <fieldset class="repeating_cognition">
+        <fieldset class="repeating_presence">
             <input type="text" name="attr_specname" />
-            <input type="number" name="attr_specval" class="sheet-short" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
 		<label>Medicine</label><input type="number" name='attr_medicine' class='sheet-short'>
         <br />
-		<label>Engineering</label><input type="number" name='attr_engineering' class='sheet-short' value='25'>
+        <fieldset class="repeating_medicine">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
         <br />
-		<label>Survival</label><input type="number" name='attr_medicine' class='sheet-short'>
-        <br />
-		<label>Animals</label><input type="number" name='attr_animals' class='sheet-short' value='25'>
-        <br />
-		<label>Naval</label><input type="number" name='attr_engineering' class='sheet-short' value='25'>
-
-	</div>
-
-	<div class="col">
-        <h3>Chips</h3>
-        <label>Reroll</label> <input type="checkbox" name="attr_reroll"><br />
-        <label>Reroll Plus</label> <input type="checkbox" name="attr_rerollplus"><br />
-        <label>Bonus</label> <input type="checkbox" name="attr_bonus"><br />
-        <label>Damage</label> <input type="checkbox" name="attr_damage"><br />
-        <label>Position</label> <input type="checkbox" name="attr_position"><br />
     </div>
-
+	<div class="col">
+		<label>Subterfuge</label><input type="number" name='attr_subterfuge' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_subterfuge">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+        <br />
+		<label>Survival</label><input type="number" name='attr_survival' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_survival">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+        <br />
+        <label>Engineering</label><input type="number" name='attr_engineering' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_engineering">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+        <br />
+		<label>Piloting</label><input type="number" name='attr_piloting' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_piloting">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+        <br />
+		<label>Mechanics</label><input type="number" name='attr_mechanics' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_mechanics">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+        <br />
+		<label>Computer Science</label><input type="number" name='attr_computer' class='sheet-short'>
+        <br />
+        <fieldset class="repeating_computer">
+            <input type="text" name="attr_specname" />
+            <input type="number" name="attr_specvalue" class="sheet-short" />
+        </fieldset>
+    </div>
 </div>
-<div class="3colrow">
+<div class="2colrow">
+    <div class="col">
+        <h3>Knowledges</h3>
+        <fieldset class="repeating_knowledge">
+            <input type="text" name="attr_knowname" class="sheet-full"/>
+        </fieldset>
+    </div>
+    <div class="col">
+        <h3>Languages</h3>
+        <fieldset class="repeating_language">
+            <input type="text" name="attr_langname"/>
+            S
+            <input type="checkbox" name="attr_speak" value="1"/>
+            <input type="checkbox" name="attr_speak" value="2"/>
+            <input type="checkbox" name="attr_speak" value="3"/>
+            R
+            <input type="checkbox" name="attr_read" value="1"/>
+            <input type="checkbox" name="attr_read" value="2"/>
 
-	<div class="col">
-		<h2>Derived Stats</h2>
-        <div class="stats">
-            <h3>Base</h3><h3>Max</h3>
-            <label>Pace</label><input type="text" name="attr_pace" /><input type="text" name="attr_pace_max"  />
-            <label>Parry</label><input type="text" name="attr_parry" /><input type="text" name="attr_parry_max" />
-            <label>Toughness</label><input type="text" name="attr_toughness"  /><input type="text" name="attr_toughness_max"  />
-            <label>Charisma</label><input type="text" name="attr_charisma" " /><input type="text" name="attr_charisma_max"  />
-        </div>
-	</div>
-
-	<div class="col">
-
-		<h2>Hindrances</h2>
-
-		<textarea name="attr_hindrances"></textarea>
-
-		<hr/>
-
-		<h2>Edges</h2>
-
-		<textarea name="attr_edges"></textarea>
-
-	</div>
-
+        </fieldset>
+    </div>
 </div>

@@ -15,12 +15,15 @@ h2 {
 
 label {
 	display: inline-block;
-	width: 45%;
+	width: 165px;
 }
 
 input {
 	display: inline-block;
 	width: 165px;
+}
+input[type=checkbox], input[type=radio] {
+	width: 16px;
 }
 
 img {
@@ -34,6 +37,9 @@ textarea {
 /* Targetted styling that only effects elements with these classes */
 input.sheet-short {
 	width: 17%;
+}
+input.sheet-full {
+	width: 100%;
 }
 
 select.sheet-dtype {
