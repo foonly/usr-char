@@ -8,15 +8,15 @@
 </div>
 <div class="3colrow">
     <div class="col">
-		<label>Fortitude</label><input type="number" name='attr_fortitude' class='sheet-short' />
+		<label>Fortitude</label><input type="number" name='attr_fortitude' class='sheet-short' /> <input type="checkbox" name='attr_fort_xp' />
         <br />
-		<label>Initiative</label><input type="number" name='attr_initiative' class='sheet-short' />
+		<label>Initiative</label><input type="number" name='attr_initiative' class='sheet-short' /> <input type="checkbox" name='attr_init_xp' />
         <br />
-		<label>Intelligence</label><input type="number" name='attr_intelligence' class='sheet-short' />
+		<label>Intelligence</label><input type="number" name='attr_intelligence' class='sheet-short' /> <input type="checkbox" name='attr_inte_xp' />
         <br />
-		<label>Willpower</label><input type="number" name='attr_willpower' class='sheet-short' />
+		<label>Willpower</label><input type="number" name='attr_willpower' class='sheet-short' /> <input type="checkbox" name='attr_will_xp' />
         <br />
-		<label>Perception</label><input type="number" name='attr_perception' class='sheet-short' />
+		<label>Perception</label><input type="number" name='attr_perception' class='sheet-short' /> <input type="checkbox" name='attr_perc_xp' />
 		<h3>Secondary Traits</h3>
         <div class="stats">
             <label>Movement Speed</label> <input type="text" name="attr_movementspeed" disabled="true" value="(@{mobility}*2+@{fortitude}+20)" class="sheet-short" /><br />
@@ -31,35 +31,35 @@
         <input type="checkbox" name="attr_position"> <label for="position">Position</label><br />
 	</div>
 	<div class="col">
-        <label>Melee Combat</label><input type="number" name='attr_melee' class='sheet-short'>
+        <label>Melee Combat</label><input type="number" name='attr_melee' class='sheet-short'> <input type="checkbox" name='attr_mele_xp' />
         <br />
         <fieldset class="repeating_melee">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Ranged Combat</label><input type="number" name='attr_ranged' class='sheet-short'>
+		<label>Ranged Combat</label><input type="number" name='attr_ranged' class='sheet-short'> <input type="checkbox" name='attr_rang_xp' />
         <br />
         <fieldset class="repeating_ranged">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Mobility</label><input type="number" name='attr_mobility' class='sheet-short' />
+		<label>Mobility</label><input type="number" name='attr_mobility' class='sheet-short' /> <input type="checkbox" name='attr_mobi_xp' />
         <br />
         <fieldset class="repeating_mobility">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Presence</label><input type="number" name='attr_presence' class='sheet-short'>
+		<label>Presence</label><input type="number" name='attr_presence' class='sheet-short'> <input type="checkbox" name='attr_pres_xp' />
         <br />
         <fieldset class="repeating_presence">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Medicine</label><input type="number" name='attr_medicine' class='sheet-short'>
+		<label>Medicine</label><input type="number" name='attr_medicine' class='sheet-short'> <input type="checkbox" name='attr_medi_xp' />
         <br />
         <fieldset class="repeating_medicine">
             <input type="text" name="attr_specname" />
@@ -68,42 +68,42 @@
         <br />
     </div>
 	<div class="col">
-		<label>Subterfuge</label><input type="number" name='attr_subterfuge' class='sheet-short'>
+		<label>Subterfuge</label><input type="number" name='attr_subterfuge' class='sheet-short'> <input type="checkbox" name='attr_subt_xp' />
         <br />
         <fieldset class="repeating_subterfuge">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Survival</label><input type="number" name='attr_survival' class='sheet-short'>
+		<label>Survival</label><input type="number" name='attr_survival' class='sheet-short'> <input type="checkbox" name='attr_surv_xp' />
         <br />
         <fieldset class="repeating_survival">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-        <label>Engineering</label><input type="number" name='attr_engineering' class='sheet-short'>
+        <label>Engineering</label><input type="number" name='attr_engineering' class='sheet-short'> <input type="checkbox" name='attr_engi_xp' />
         <br />
         <fieldset class="repeating_engineering">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Piloting</label><input type="number" name='attr_piloting' class='sheet-short'>
+		<label>Piloting</label><input type="number" name='attr_piloting' class='sheet-short'> <input type="checkbox" name='attr_pilo_xp' />
         <br />
         <fieldset class="repeating_piloting">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Mechanics</label><input type="number" name='attr_mechanics' class='sheet-short'>
+		<label>Mechanics</label><input type="number" name='attr_mechanics' class='sheet-short'> <input type="checkbox" name='attr_mech_xp' />
         <br />
         <fieldset class="repeating_mechanics">
             <input type="text" name="attr_specname" />
             <input type="number" name="attr_specvalue" class="sheet-short" />
         </fieldset>
         <br />
-		<label>Computer Science</label><input type="number" name='attr_computer' class='sheet-short'>
+		<label>Computer Science</label><input type="number" name='attr_computer' class='sheet-short'> <input type="checkbox" name='attr_comp_xp' />
         <br />
         <fieldset class="repeating_computer">
             <input type="text" name="attr_specname" />
@@ -116,6 +116,16 @@
         <h3>Knowledges</h3>
         <fieldset class="repeating_knowledge">
             <input type="text" name="attr_knowname" class="sheet-full"/>
+        </fieldset>
+        <h3>Contacts</h3>
+        <fieldset class="repeating_contacts">
+            <input type="text" name="attr_contname"/> -
+            <input type="text" name="attr_conttype"/>
+        </fieldset>
+        <h3>Gear</h3>
+        <fieldset class="repeating_gear">
+            <input type="text" name="attr_gearname" class="sheet-match"/>
+            <input type="number" name="attr_gearqty" class="sheet-short"/>
         </fieldset>
     </div>
     <div class="col">
@@ -130,6 +140,37 @@
             <input type="checkbox" name="attr_read" value="1"/>
             <input type="checkbox" name="attr_read" value="2"/>
 
+        </fieldset>
+        <h3>Notes</h3>
+        <textarea class="attr_notes">
+        </textarea>
+    </div>
+</div>
+<div class="2colrow">
+    <div class="col">
+        <h3>Guns</h3>
+        <label>Weapon</label>
+        <label class="short">Dmg</label>
+        <label class="short">Acc</label>
+        <label class="short">Shots</label>
+        <fieldset class="repeating_guns">
+            <input type="text" name="attr_weapname"/>
+            <input type="text" name="attr_dmg" class="short"/>
+            <input type="text" name="attr_acc" class="short"/>
+            <input type="text" name="attr_shot" class="short"/>
+        </fieldset>
+    </div>
+    <div class="col">
+        <h3>Pokers</h3>
+        <label>Weapon</label>
+        <label class="short">Dmg</label>
+        <label class="short">Quick</label>
+        <label class="short">Impact</label>
+        <fieldset class="repeating_poke">
+            <input type="text" name="attr_weapname"/>
+            <input type="text" name="attr_dmg" class="short"/>
+            <input type="text" name="attr_qui" class="short"/>
+            <input type="text" name="attr_imp" class="short"/>
         </fieldset>
     </div>
 </div>
